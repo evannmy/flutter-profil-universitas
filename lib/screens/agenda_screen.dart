@@ -16,7 +16,9 @@ class AgendaScreen extends StatelessWidget {
       body: Center(
         child: Text(
           'Halaman Agenda Kampus',
-          style: Theme.of(context).textTheme.headlineMedium,
+          style: Theme.of(
+            context,
+          ).textTheme.headlineSmall?.copyWith(color: Colors.white),
         ),
       ),
     );

@@ -3,11 +3,9 @@ import 'package:profil_universitas/constants.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:profil_universitas/screens/agenda_screen.dart';
 
-// Kembali menjadi StatelessWidget yang sederhana
 class HomeScreen extends StatelessWidget {
   final Function(int) onNavigate;
 
-  // 2. Tambahkan 'onNavigate' ke constructor
   const HomeScreen({super.key, required this.onNavigate});
 
   @override
@@ -37,14 +35,12 @@ class HomeScreen extends StatelessWidget {
     );
   }
 
-  // MODIFIKASI WIDGET HERO SECTION
   Widget _buildHeroSection() {
     return Container(
       height: 220,
       width: double.infinity,
       decoration: BoxDecoration(
         color: kPrimaryBlue, // Warna latar belakang jika gambar error
-        // --- INI BAGIAN UTAMA YANG DIUBAH ---
         image: DecorationImage(
           // Ganti 'hero_image.jpg' dengan nama file Anda
           image: AssetImage('assets/images/hero-image-2.png'),
@@ -68,7 +64,7 @@ class HomeScreen extends StatelessWidget {
             end: Alignment.topCenter,
           ),
         ),
-        // Teks di atas gambar (tidak berubah)
+        // Teks di atas gambar
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Column(
@@ -93,9 +89,6 @@ class HomeScreen extends StatelessWidget {
       ),
     );
   }
-
-  // (Widget _buildMainMenuGrid dan _buildAboutCard SAMA SEPERTI SEBELUMNYA)
-  // ... (salin sisa kode dari versi video)
 
   // Widget private untuk Grid Menu
   Widget _buildMainMenuGrid(BuildContext context) {
@@ -124,8 +117,7 @@ class HomeScreen extends StatelessWidget {
           crossAxisCount = 2; // <-- Tampilkan 2 KOLOM
         }
 
-        // 3. KITA HAPUS 'Center' dan 'ConstrainedBox'
-        //    Kita ingin grid ini mengisi layar
+        // 3. Kita ingin grid ini mengisi layar
         return Container(
           padding: EdgeInsets.all(padding), // <-- Gunakan padding dinamis
           child: GridView.count(
@@ -187,7 +179,7 @@ class HomeScreen extends StatelessWidget {
         onTap: onTap,
         borderRadius: BorderRadius.circular(12.0),
         child: Container(
-          padding: const EdgeInsets.all(12.0), // <-- Ini sudah diperkecil
+          padding: const EdgeInsets.all(12.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,

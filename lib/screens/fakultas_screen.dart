@@ -59,14 +59,12 @@ class FakultasScreen extends StatelessWidget {
           style: TextStyle(color: Color(0xFFE6C131)),
         ),
       ),
-      // Ganti Latar belakang halaman
       body: ListView.builder(
         padding: const EdgeInsets.all(16.0), // Beri padding pada list
         itemCount: daftarFakultas.length,
         itemBuilder: (context, index) {
           final fakultas = daftarFakultas[index];
 
-          // GANTI Tampilan ListTile lama dengan Card kustom
           return Card(
             margin: const EdgeInsets.only(bottom: 16.0), // Jarak antar kartu
             child: InkWell(

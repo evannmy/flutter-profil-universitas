@@ -14,9 +14,6 @@ class MainNavigator extends StatefulWidget {
 class _MainNavigatorState extends State<MainNavigator> {
   int _selectedIndex = 0;
 
-  // --- KITA UBAH BAGIAN INI ---
-
-  // Hapus 'const' dan 'static' dari _widgetOptions
   late final List<Widget> _widgetOptions;
 
   @override
@@ -31,7 +28,6 @@ class _MainNavigatorState extends State<MainNavigator> {
       KontakScreen(),
     ];
   }
-  // --- AKHIR PERUBAHAN ---
 
   void _onItemTapped(int index) {
     setState(() {
@@ -44,7 +40,6 @@ class _MainNavigatorState extends State<MainNavigator> {
     return Scaffold(
       body: Center(child: _widgetOptions.elementAt(_selectedIndex)),
       bottomNavigationBar: BottomNavigationBar(
-        // ... (sisa kodenya sama)
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Beranda'),
           BottomNavigationBarItem(icon: Icon(Icons.school), label: 'Fakultas'),
